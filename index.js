@@ -2,6 +2,14 @@ const imgs = document.querySelectorAll("#imagens img");
 const INTERVAL_TIMING = 3000
 
 let index = 0;
+let id = setInterval(carrossel, INTERVAL_TIMING)
+
+function clickCarrossel() {
+  clearTimeout(id)
+  carrossel()
+  id = setInterval(carrossel, INTERVAL_TIMING)
+}
+
 function carrossel() {
   index++
 
@@ -24,4 +32,3 @@ function carrossel() {
   }
 }
 
-setInterval(carrossel, INTERVAL_TIMING)
