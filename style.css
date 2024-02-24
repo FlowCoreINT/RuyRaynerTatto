@@ -100,24 +100,35 @@ header{
 
 /* terceiraAba Carrosell */
 
-.terceiraAba{
-    box-shadow: 2px 2px 4px black;
-    overflow: hidden;
-    height: 500px;
-    width: 500px;
-    margin: 0% auto;
+.terceiraAba {
+  box-shadow: 2px 2px 4px black;
+  overflow: hidden;
+  height: 40rem;
+  width: 100%;
+  margin: 0% auto;
+  position: relative;
 }
 
-.carrossel{
-    display: flex;
-    transition: transform 0,5 ease-in-out;
-    transform: translate(0);
+.carrossel {
+  display: flex;
+  transition: transform 0, 5 ease-in-out;
+  width: 100%;
 }
 
-.carrossel img{
-    object-fit: contain;
-    height: 500px;
-    width: 500px;
+.carrossel img {
+  object-fit: cover;
+  height: 50rem;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  right: -100%;
+  transition: 0.5s ease right, left;
+}
+
+.carrossel .active {
+  width: 100%;
+  right: 0!important;
+  z-index: 100;
 }
 
 

@@ -1,15 +1,27 @@
+const imgs = document.querySelectorAll("#imagens img");
+const INTERVAL_TIMING = 3000
 
-const imgs = document.getElementById( "imagens" );
-const img = document.querySelectorAll( "#imagens img" );
+let index = 0;
+function carrossel() {
+  index++
 
-let idx = 0;
+  if (index > imgs.length - 1) {
+    index = 0
 
-function carrossel(){
-    idx++;
-
-    if(idx > img.length  - 1){
-        idx = 0;
+    for (const img of imgs) {
+      img.style.right = "-100%"
     }
+  }
 
-    imgs.style.transform = `translateX(${-idx * 550}px)` ;
+  imgs[index].classList.add("active")
+
+  if ((index - 1) < 0) {
+    imgs[imgs.length - 1].style.right = "100%"
+    imgs[imgs.length - 1].classList.remove("active")
+  } else {
+    imgs[index - 1].style.right = "100%"
+    imgs[index - 1].classList.remove("active")
+  }
 }
+
+setInterval(carrossel, INTERVAL_TIMING)
