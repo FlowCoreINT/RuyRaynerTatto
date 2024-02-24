@@ -1,0 +1,166 @@
+
+body{
+    background-color: #141414;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@keyframes float{
+	0%,100%{
+		transform:translatey(1)
+	}
+	50%{
+		transform:translatey(20px)
+	}
+}
+
+body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    display: none;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color:#d2691e;    /* color of the scroll thumb */
+    border-radius: 5px;       /* roundness of the scroll thumb */
+  }
+
+a{
+    all: unset;
+    cursor: pointer;
+}
+
+/* parte da primeira aba */
+.primeiraAba{
+    background-image: url(imagens/lucas-lenzi-zeT_i6av9rU-unsplash\ \(1\).jpg);
+    height: 100vh;
+    grid-template-columns: auto auto auto;
+    color: aliceblue;
+}
+
+header{
+    display: flex;
+    justify-content: end;
+}
+
+.buscaRapida{
+    height: 5vh;
+    width:250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+}
+
+.container{
+    height:  85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+}
+
+/* segunda aba */
+.segundaAba{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.RaynerFt{
+    border-radius: 5%;
+    height: 500px;
+}
+
+.RaynerFt:hover{
+    transform: scale(1.1);
+    opacity: 0.7;
+    box-shadow: 10px 10px 10px;
+}
+
+.apresentação{
+    width: 400px;
+    height: 500px;
+    color: aliceblue;
+}
+
+.apresentação h1{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.apresentação p{
+    font-size: 20px;
+}
+
+/* terceiraAba Carrosell */
+
+.terceiraAba{
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+    margin: 0% auto;
+}
+
+.carrossel{
+    display: flex;
+    transition: transform 0,5 ease-in-out;
+    transform: translate(0);
+}
+
+.carrossel img{
+    object-fit: contain;
+    height: 500px;
+    width: 500px;
+}
+
+
+/* quarta aba conatos */
+
+.quartaAba{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logoRede{
+    width: 100px;
+    height: 100px;
+}
+
+.card{
+    background-color:dimgrey;
+    height: 500px;
+    width: 350px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card h1{
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    opacity: 0.7;
+    box-shadow: 10px 10px 10px;
+    cursor: pointer;
+}
