@@ -1,5 +1,5 @@
 const imgs = document.querySelectorAll("#imagens img");
-const INTERVAL_TIMING = 3000
+const INTERVAL_TIMING =3000
 
 let index = 0;
 function carrossel() {
